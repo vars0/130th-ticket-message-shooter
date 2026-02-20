@@ -12,7 +12,7 @@ app.post("/webhook", async (req, res) => {
     const data = req.body;
 
     const name = data["이름"];
-    const phone = (data["전화번호"] || "").replace(/[^0-9]/g, ""); // 숫자만
+    const phone = (data["전화번호 (ex. 01012345678)"] || "").replace(/[^0-9]/g, ""); // 숫자만
     
     // 예매 회차 처리: "2회차 3/6(금) 19시 30분 (0/70명)" -> "2회차 3/6(금) 19시 30분"만 추출
     const rawSession = data["예매 회차"] || "";
