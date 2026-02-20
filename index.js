@@ -23,15 +23,13 @@ app.post("/webhook", async (req, res) => {
     }
 
     // 130회 대공연 맞춤 메시지 템플릿
-    const message = `[Web발신]
-안녕하세요, ${name}님
+    const message = `안녕하세요, ${name}님
 예매가 완료되었습니다.
 
 <회장님의 위인전>
 
 공연 일시: ${cleanSession}
 러닝 타임: 80분
-좌석 수: 1석 (본인)
 공연 장소: 예술공간 혜화
 (서울특별시 종로구 혜화로 10-3)
 
