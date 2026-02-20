@@ -10,8 +10,8 @@ const sendMessage = ({ phone, message }) => {
       receiver: phone,
       msg: message,
       msg_type: "LMS",
-      title: "[성균극회 130회 대공연 예매 안내]", // 130회로 수정
-      testmode_yn: "N", 
+      title: "[성균극회 130회 대공연 예매 안내]",
+      testmode_yn: "N",
     });
 
     const options = {
@@ -31,7 +31,7 @@ const sendMessage = ({ phone, message }) => {
         try {
           resolve(JSON.parse(data));
         } catch (e) {
-          reject(new Error("알리고 응답 파싱 에러"));
+          reject(new Error("JSON 파싱 에러"));
         }
       });
     });
